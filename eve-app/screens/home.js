@@ -1,8 +1,13 @@
+// import { StatusBar } from 'expo-status-bar';
+// import { StyleSheet, Text, View, Button } from 'react-native';
+// import { getDatabase, ref, set } from "firebase/database";
+// import { app } from './firebase-config';
+
 import React, { useState } from 'react';
 import {Picker} from '@react-native-picker/picker';
 import { View, Text, Switch, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-const DashboardScreen = ({ navigation }) => {
+const HomeScreen = ({ navigation }) => {
   const [currentCharge, setCurrentCharge] = useState(80); // Assuming 80% charge initially
   const [ecoMode, setEcoMode] = useState(false); // Eco mode is initially off
 
@@ -13,7 +18,6 @@ const DashboardScreen = ({ navigation }) => {
   const [selectedChargeTime, setSelectedChargeTime] = useState('1 hour');
 
   const handleStartPress = () => {
-    // Implement the functionality for when the "Start" button is pressed
     console.log('Start button pressed!');
     navigation.navigate('GreenScreen');
   };
@@ -24,9 +28,9 @@ const DashboardScreen = ({ navigation }) => {
       <Text style={styles.headerText}>Kenny</Text>
       <Text style={styles.text}>Tesla Model 3</Text>
       <Image
-        source={require('../assets/cybertruck.png')}  // Adjust the path accordingly
+        source={require('../assets/cybertruck.png')}
         style={styles.image}
-        resizeMode="cover"  // Adjust the resizeMode as needed
+        resizeMode="cover"
       />
       <Text style={styles.label}>How long do you want to charge?</Text>
       <Picker
@@ -44,34 +48,13 @@ const DashboardScreen = ({ navigation }) => {
       <TouchableOpacity onPress={handleStartPress} style={styles.button}>
         <Text style={styles.buttonText}>Start</Text>
       </TouchableOpacity>
-      {/* <Text style={styles.text}>Current Charge: {currentCharge}%</Text>
-
-      <View style={{ marginTop: 20, flexDirection: 'row', alignItems: 'center' }}>
-        <Text style={styles.text}>Eco Mode: </Text>
-        <Switch
-          value={ecoMode}
-          onValueChange={handleEcoModeToggle}
-        />
-      </View> */}
-
-      {/* <Text style={styles.text}>Electricity Source Breakdown:</Text>
-      <View style={{ marginTop: 10 }}>
-        <Text style={styles.text}>Nuclear: 20%</Text>
-        <Text style={styles.text}>Biomass: 10%</Text>
-        <Text style={styles.text}>Coal: 30%</Text>
-        <Text style={styles.text}>Wind: 5%</Text>
-        <Text style={styles.text}>Solar: 15%</Text>
-        <Text style={styles.text}>Hydro: 10%</Text>
-        <Text style={styles.text}>Gas: 5%</Text>
-        <Text style={styles.text}>Oil: 5%</Text>
-      </View> */}
     </View>
     </View>
     
   );
 };
 
-export default DashboardScreen;
+export default HomeScreen;
 
 const styles = StyleSheet.create({
   container: {
