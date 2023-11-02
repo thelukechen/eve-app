@@ -25,6 +25,16 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },"fonts": [
+      {
+        "SFProDisplay-Bold": "./assets/fonts/SF-Pro-Display-Bold.otf"
+      },
+      {
+        "SFProDisplay-Regular": "./assets/fonts/SF-Pro-Display-Regular.otf"
+      },
+      {
+        "SFProDisplay-Thin": "./assets/fonts/SF-Pro-Display-Thin.otf"
+      }
+    ]
   }
 }
