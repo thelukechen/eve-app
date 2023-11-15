@@ -65,14 +65,14 @@ const ActivityScreen = () => {
       {/* Electric Power Breakdown */}
       <Text style={styles.breakdownTitle}>Electric Power Breakdown</Text>
       <View style={styles.breakdownContainer}>
-        <Text>Gas: 30%</Text>
-        <Text>Nuclear: 15%</Text>
-        <Text>Hydro: 10%</Text>
-        <Text>Solar: 20%</Text>
-        <Text>Wind: 15%</Text>
-        <Text>Geothermal: 5%</Text>
-        <Text>Biomass: 3%</Text>
-        <Text>Battery: 2%</Text>
+        <Text style={styles.white}>Gas: 30%</Text>
+        <Text style={styles.white}>Nuclear: 15%</Text>
+        <Text style={styles.white}>Hydro: 10%</Text>
+        <Text style={styles.white}>Solar: 20%</Text>
+        <Text style={styles.white}>Wind: 15%</Text>
+        <Text style={styles.white}>Geothermal: 5%</Text>
+        <Text style={styles.white}>Biomass: 3%</Text>
+        <Text style={styles.white}>Battery: 2%</Text>
       </View>
     </View>
   );
@@ -89,21 +89,28 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
+    color: 'white',
   },
   chartTitle: {
     fontSize: 20,
     fontWeight: 'bold',
     marginTop: 20,
+    color: 'white',
   },
   breakdownTitle: {
     fontSize: 20,
     fontWeight: 'bold',
     marginTop: 20,
+    color: 'white',
   },
   breakdownContainer: {
     marginTop: 10,
     marginLeft: 20,
+    color: 'white',
   },
+  white: {
+    color:  'white',
+  }
 });
 
 export default ActivityScreen;
