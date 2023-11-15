@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ActivityScreen from './screens/activity';
 import ProfileScreen from './screens/profile';
 import HomeScreen from './screens/home';
+import Icon from 'react-native-vector-icons/Ionicons';
 // import SignInScreen from './screens/auth';
 // import { AppRegistry } from 'react-native';
 // import { name as appName } from './app.json';
@@ -30,10 +31,23 @@ const App = () => {
       {/* <Screen.Navigator> */}
         {/* <Screen name="Auth" component={SignInScreen} /> */}
       {/* </Screen.Navigator> */}
-      <Tab.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }} >
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Activity" component={ActivityScreen} />
-        <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Navigator initialRouteName="Home" screenOptions={{ headerShown: false, 
+      tabBarActiveTintColor: '#38feaf', tabBarInactiveTintColor: 'white', tabBarStyle: [{display: 'flex', backgroundColor: '#212121', borderTopColor: '#38feaf'}]}}>
+        <Tab.Screen name="Home" component={HomeScreen} options={{
+            tabBarIcon: ({ color, size }) => (
+              <Icon name="home-outline" color={color} size={size} />
+            ),
+          }}/>
+        <Tab.Screen name="Activity" component={ActivityScreen} options={{
+            tabBarIcon: ({ color, size }) => (
+              <Icon name="ios-pulse" color={color} size={size} />
+            ),
+          }}/>
+        <Tab.Screen name="Profile" component={ProfileScreen} options={{
+            tabBarIcon: ({ color, size }) => (
+              <Icon name="person-outline" color={color} size={size} />
+            ),
+          }}/>
         {/* <Tab.Screen name="Sign In" component={SignInScreen} /> */}
       </Tab.Navigator>
     </NavigationContainer>

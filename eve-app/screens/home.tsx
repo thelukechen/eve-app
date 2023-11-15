@@ -59,7 +59,8 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',  // Set the background color to black
+    backgroundColor: '#212121',
+    color: 'white',
   },
   text: {
     color: 'white', // Set the text color to white
@@ -85,7 +86,7 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   button: {
-    backgroundColor: 'green',
+    backgroundColor: '#38feaf',
     borderRadius: 100, // Make it a circle by setting a large border radius
     padding: 15,
     width: 150, // Adjust the width and height to set the size of the circle

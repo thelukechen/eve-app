@@ -4,11 +4,13 @@ const ProfileScreenStyles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 15,
-        backgroundColor: 'black',
+        backgroundColor: '#212121',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     tabName: {
         fontSize: 32,
-        fontFamily: 'SFProDisplay-Bold',
+        fontFamily: 'SFProDisplayRegular',
         marginBottom: 10,
         color: 'white',
     },
@@ -21,7 +23,7 @@ const ProfileScreenStyles = StyleSheet.create({
     name: {
         fontSize: 24,
         fontWeight: 'bold',
-        marginBottom: 10,
+        marginBottom: 20,
         color: 'white',
     },
     bio: {
