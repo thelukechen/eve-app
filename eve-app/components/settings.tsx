@@ -44,13 +44,13 @@ const SettingsButtons = () => {
             <HorizontalLine />
             <TouchableOpacity style={ProfileScreenStyles.button}>
                 <Icon name="lock-closed-outline" size={20} color= {white}/>
-                <Text style={ProfileScreenStyles.buttonText}>   Privacy and Sharing</Text>
+                <Text style={ProfileScreenStyles.buttonText}>   Privacy and Sharing </Text>
                 <CaretFoward />
             </TouchableOpacity>
             <HorizontalLine />
             <TouchableOpacity style={ProfileScreenStyles.button}>
                 <Icon name="exit-outline" size={20} color= {white}/>
-                <Text style={ProfileScreenStyles.buttonText}>   Logout                      </Text>
+                <Text style={ProfileScreenStyles.buttonText}>   Logout                       </Text>
                 <CaretFoward />
             </TouchableOpacity>
         </View>

@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, ScrollView } from 'react-native';
-import ProfileScreenStyles from '../../styles/screens/profileStyles';
+import { ScrollView } from 'react-native';
 import ProfilePic from '../../components/profilePic';
 import Cars from '../../components/cars';
 import SettingsButtons from '../../components/settings';

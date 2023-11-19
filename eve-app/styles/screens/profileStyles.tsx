@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { black, green, white } from '../globalStyles';
+import { green, white } from '../globalStyles';
 
 const ProfileScreenStyles = StyleSheet.create({
     name: { // used in profilePic.tsx
-        fontSize: 26,
+        fontSize: 28,
         color: white,
     },
     avatar: { // used in profilePic.tsx
@@ -14,20 +14,22 @@ const ProfileScreenStyles = StyleSheet.create({
         backgroundColor: 'transparent',
         borderColor: green,
         borderWidth: 2,
-        borderRadius: 50,
+        borderRadius: 60,
         marginRight: 20,
         width: 255,
-        height: 255,
+        height: 300,
     },
     carImage: { // used in cars.tsx
-        width: 250,
-        height: 220,
-        marginLeft: 10,
+        width: 225,
+        height: 120,
+        marginLeft: 15,
+        marginTop: 15,
+        marginBottom: 15,
     },
     carText: { // used in cars.tsx
         textAlign: 'center',
         color: white,
-        fontSize: 16,
+        fontSize: 18,
     },
     button: { // used in settings.tsx
         width: '100%',
@@ -45,7 +47,7 @@ const ProfileScreenStyles = StyleSheet.create({
         paddingLeft: 260,
     },
     editProfile: { // used in profilePic.tsx
-        paddingLeft: 220,
+        paddingLeft: 216,
     },
     caret: { // used in caretForward.tsx
         paddingLeft: 190,
@@ -61,6 +63,26 @@ const ProfileScreenStyles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'normal',
     },
+    editButton: { // used in cars.tsx
+        color: white,
+        fontSize: 16,
+        fontWeight: 'normal',
+        marginRight: 10,
+    },
+    carDetails: { // used in cars.tsx
+        width: '100%',
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingLeft: 1,
+        paddingRight: 1,
+    },
+    carDetailsText: { // used in cars.tsx
+        textAlign: 'center',
+        color: white,
+        fontSize: 16,
+    }
 });
 
 export default ProfileScreenStyles;
