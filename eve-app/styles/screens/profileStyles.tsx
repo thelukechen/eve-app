@@ -1,47 +1,55 @@
 import { StyleSheet } from 'react-native';
+import { black, green, white } from '../globalStyles';
 
 const ProfileScreenStyles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: 15,
-        backgroundColor: '#212121',
-        alignItems: 'center',
-        justifyContent: 'center',
+    name: { // used in profilePic.tsx
+        fontSize: 26,
+        color: white,
     },
-    tabName: {
-        fontSize: 32,
-        fontFamily: 'SFProDisplayRegular',
-        marginBottom: 10,
-        color: 'white',
+    avatar: { // used in profilePic.tsx
+        borderWidth: 2, 
+        borderColor: white,
     },
-    profileImage: {
-        width: 150,
-        height: 150,
-        borderRadius: 75,
-        marginBottom: 20,
+    carButton: { // used in cars.tsx
+        backgroundColor: 'transparent',
+        borderColor: green,
+        borderWidth: 2,
+        borderRadius: 50,
+        marginRight: 20,
+        width: 255,
+        height: 255,
     },
-    name: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 20,
-        color: 'white',
+    carImage: { // used in cars.tsx
+        width: 250,
+        height: 220,
+        marginLeft: 10,
     },
-    bio: {
-        fontSize: 16,
+    carText: { // used in cars.tsx
         textAlign: 'center',
-        marginHorizontal: 20,
-        marginBottom: 20,
-    },
-    button: {
-        backgroundColor: '#007AFF',
-        paddingVertical: 10,
-        paddingHorizontal: 20,
-        borderRadius: 5,
-    },
-    buttonText: {
-        color: '#fff',
+        color: white,
         fontSize: 16,
-        fontWeight: 'bold',
+    },
+    button: { // used in settings.tsx
+        width: '100%',
+        paddingTop: 20,
+        paddingBottom: 20,
+        alignItems: 'flex-start',
+        flexDirection: 'row',
+        fontSize: 18,
+    },
+    buttonText: { // used in settings.tsx
+        color: white,
+        fontSize: 16,
+    },
+    notifications: { // used in profileHeader.tsx
+        paddingLeft: 260,
+    },
+    editProfile: { // used in profilePic.tsx
+        paddingLeft: 220,
+    },
+    caret: { // used in caretForward.tsx
+        paddingLeft: 190,
+        alignSelf: 'flex-end'
     },
 });
 
