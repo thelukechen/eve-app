@@ -51,6 +51,16 @@ const ProfileScreenStyles = StyleSheet.create({
         paddingLeft: 190,
         alignSelf: 'flex-end'
     },
+    addButton: { // used in cars.tsx
+        flexDirection: 'row', 
+        justifyContent: 'space-between', 
+        alignItems: 'flex-end',
+    },
+    addButtonText: { // used in cars.tsx
+        color: green,
+        fontSize: 16,
+        fontWeight: 'normal',
+    },
 });
 
 export default ProfileScreenStyles;

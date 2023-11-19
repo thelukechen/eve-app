@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, TouchableOpacity, View, Text, Image } from 'react-native';
 import ProfileScreenStyles from '../styles/screens/profileStyles';
-import GlobalStyles from '../styles/globalStyles';
+import GlobalStyles, { green } from '../styles/globalStyles';
 
 const Cars = () => {
   
@@ -26,9 +26,13 @@ const Cars = () => {
   
   return (
     <View style={GlobalStyles.column}>
-      <View style={GlobalStyles.subView}>
-        <Text style={GlobalStyles.subText}>Your Vehicles</Text>
-      </View>
+        <View style={[GlobalStyles.subView, ProfileScreenStyles.addButton]}>
+          <Text style={GlobalStyles.subText}>Your Vehicles</Text>
+          <TouchableOpacity onPress={() => console.log('Add Button Pressed')}>
+            <Text style={[GlobalStyles.subText, ProfileScreenStyles.addButtonText]}>+ Add</Text>
+          </TouchableOpacity>
+        </View>
+      
       <ScrollView horizontal={true} 
       showsHorizontalScrollIndicator={false}>
         {electricVehicles.map((vehicle, index) => (
