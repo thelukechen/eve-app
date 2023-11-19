@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   buttonText: {
-    color: 'white',
+    color: 'black',
     textAlign: 'center',
     fontSize: 18,
     fontWeight: 'bold',

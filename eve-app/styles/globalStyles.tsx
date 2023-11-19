@@ -26,13 +26,14 @@ export const GlobalStyles = StyleSheet.create({
         paddingTop: 100,
         backgroundColor: black,
         alignItems: 'center',
+        // justifyContent: 'center',
         justifyContent: 'flex-start',
     },
     row: {
         width: '100%',
         flex: 1,
         flexDirection: 'row',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         paddingBottom: 5,
         paddingTop: 5,
         paddingLeft: 1,
@@ -56,7 +57,11 @@ export const GlobalStyles = StyleSheet.create({
     test: {
         borderWidth: 1,
         borderColor: 'yellow',
-    }
+    },
+    center: {
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 });
 
 export default GlobalStyles;

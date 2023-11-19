@@ -8,7 +8,7 @@ import GlobalStyles, { white } from '../styles/globalStyles';
 const ProfilePic = () => {
     
   return (
-    <View style={GlobalStyles.row}>
+    <View style={[GlobalStyles.row, GlobalStyles.center]}>
       <Avatar rounded size="large" 
       containerStyle={ProfileScreenStyles.avatar}
       source={require('../assets/images/profile_pic.jpeg')}

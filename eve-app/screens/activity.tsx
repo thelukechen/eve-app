@@ -1,6 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { LineChart, BarChart } from 'react-native-chart-kit';
+import GlobalStyles, { white } from '../styles/globalStyles';
+import ActivityHeader from '../components/activityHeader';
+import CurrVehicle from '../components/currVehicle';
 
 const ActivityScreen = () => {
   // Sample data for the line chart
@@ -31,50 +34,56 @@ const ActivityScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Activity</Text>
+    <ScrollView contentContainerStyle={GlobalStyles.container} 
+    style={GlobalStyles.scrollView} indicatorStyle='white'
+    showsVerticalScrollIndicator={true}>
+      <ActivityHeader />
+      <CurrVehicle />
+    </ScrollView>
+    // <View style={styles.container}>
+    //   <Text style={styles.header}>Activity</Text>
 
-      {/* Line Chart */}
-      <Text style={styles.chartTitle}>Power Usage vs Fossil Fuel Saved</Text>
-      <LineChart
-        data={lineChartData}
-        width={400}
-        height={200}
-        chartConfig={{
-          backgroundGradientFrom: '#fff',
-          backgroundGradientTo: '#fff',
-          decimalPlaces: 2,
-          color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-        }}
-      />
+    //   {/* Line Chart */}
+    //   <Text style={styles.chartTitle}>Power Usage vs Fossil Fuel Saved</Text>
+    //   <LineChart
+    //     data={lineChartData}
+    //     width={400}
+    //     height={200}
+    //     chartConfig={{
+    //       backgroundGradientFrom: '#fff',
+    //       backgroundGradientTo: '#fff',
+    //       decimalPlaces: 2,
+    //       color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+    //     }}
+    //   />
 
-      {/* Bar Chart */}
-      <Text style={styles.chartTitle}>Power Mix Report</Text>
-      <BarChart
-        data={barChartData}
-        width={400}
-        height={200}
-        chartConfig={{
-          backgroundGradientFrom: '#fff',
-          backgroundGradientTo: '#fff',
-          decimalPlaces: 0,
-          color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-        }}
-      />
+    //   {/* Bar Chart */}
+    //   <Text style={styles.chartTitle}>Power Mix Report</Text>
+    //   <BarChart
+    //     data={barChartData}
+    //     width={400}
+    //     height={200}
+    //     chartConfig={{
+    //       backgroundGradientFrom: '#fff',
+    //       backgroundGradientTo: '#fff',
+    //       decimalPlaces: 0,
+    //       color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+    //     }}
+    //   />
 
-      {/* Electric Power Breakdown */}
-      <Text style={styles.breakdownTitle}>Electric Power Breakdown</Text>
-      <View style={styles.breakdownContainer}>
-        <Text style={styles.white}>Gas: 30%</Text>
-        <Text style={styles.white}>Nuclear: 15%</Text>
-        <Text style={styles.white}>Hydro: 10%</Text>
-        <Text style={styles.white}>Solar: 20%</Text>
-        <Text style={styles.white}>Wind: 15%</Text>
-        <Text style={styles.white}>Geothermal: 5%</Text>
-        <Text style={styles.white}>Biomass: 3%</Text>
-        <Text style={styles.white}>Battery: 2%</Text>
-      </View>
-    </View>
+    //   {/* Electric Power Breakdown */}
+    //   <Text style={styles.breakdownTitle}>Electric Power Breakdown</Text>
+    //   <View style={styles.breakdownContainer}>
+    //     <Text style={styles.white}>Gas: 30%</Text>
+    //     <Text style={styles.white}>Nuclear: 15%</Text>
+    //     <Text style={styles.white}>Hydro: 10%</Text>
+    //     <Text style={styles.white}>Solar: 20%</Text>
+    //     <Text style={styles.white}>Wind: 15%</Text>
+    //     <Text style={styles.white}>Geothermal: 5%</Text>
+    //     <Text style={styles.white}>Biomass: 3%</Text>
+    //     <Text style={styles.white}>Battery: 2%</Text>
+    //   </View>
+    // </View>
   );
 };
 
