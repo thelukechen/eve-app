@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import ProfilePic from '../components/profilePic';
+import ProfilePic from '../components/profileComponents/profilePic';
 import { black } from '../styles/globalStyles';
-import Cars from '../components/cars';
-import SettingsButtons from '../components/settings';
+import Cars from '../components/profileComponents/cars';
+import SettingsButtons from '../components/profileComponents/settings';
 
 const TestScreen = () => {
   return (

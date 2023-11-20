@@ -1,10 +1,10 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-import ProfilePic from '../../components/profilePic';
-import Cars from '../../components/cars';
-import SettingsButtons from '../../components/settings';
+import ProfilePic from '../../components/profileComponents/profilePic';
+import Cars from '../../components/profileComponents/cars';
+import SettingsButtons from '../../components/profileComponents/settings';
 import GlobalStyles from '../../styles/globalStyles';
-import ProfileHeader from '../../components/profileHeader';
+import ProfileHeader from '../../components/profileComponents/profileHeader';
 
 const ProfileScreen = ({ }: {navigation: any}) => {
   

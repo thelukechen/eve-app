@@ -2,8 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { LineChart, BarChart } from 'react-native-chart-kit';
 import GlobalStyles, { white } from '../styles/globalStyles';
-import ActivityHeader from '../components/activityHeader';
-import CurrVehicle from '../components/currVehicle';
+import ActivityHeader from '../components/activityComponents/activityHeader';
+import CurrVehicle from '../components/activityComponents/currVehicle';
 
 const ActivityScreen = () => {
   // Sample data for the line chart

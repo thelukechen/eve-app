@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text } from 'react-native';
-import GlobalStyles, { white } from '../styles/globalStyles';
+import { View } from 'react-native';
+import GlobalStyles, { white } from '../../styles/globalStyles';
 import { Picker } from '@react-native-picker/picker';
-import HomeScreenStyles from '../styles/screens/homeStyles';
+import HomeScreenStyles from '../../styles/screens/homeStyles';
 
 const ChargeInput = () => {
   

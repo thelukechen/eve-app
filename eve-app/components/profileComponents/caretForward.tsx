@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { white } from '../styles/globalStyles';
-import ProfileScreenStyles from '../styles/screens/profileStyles';
+import { white } from '../../styles/globalStyles';
+import ProfileScreenStyles from '../../styles/screens/profileStyles';
 
 const CaretFoward = () => {
     

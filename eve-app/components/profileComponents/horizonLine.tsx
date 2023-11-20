@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { white } from '../styles/globalStyles';
+import { white } from '../../styles/globalStyles';
 
 const HorizontalLine = () => {
     

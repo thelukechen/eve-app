@@ -1,14 +1,19 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import GlobalStyles from '../styles/globalStyles';
-import HomeScreenStyles from '../styles/screens/homeStyles';
+import GlobalStyles from '../../styles/globalStyles';
+import HomeScreenStyles from '../../styles/screens/homeStyles';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../../screens/home/home';
 
-const StartButton = ({ }) => {
-    
+type HomeScreenProps = {
+    navigation: StackNavigationProp<RootStackParamList, 'NotCharging'>;
+  };
+
+const StartButton: React.FC<HomeScreenProps> = ({ navigation }) => {
     const handleStartPress = () => {
         console.log('Start button pressed!');
-        // navigation.navigate('GreenScreen');
-      };
+        navigation.navigate('Charging');
+    };
       
     return (
         <View style={[GlobalStyles.row, {justifyContent: 'center'}]}>
@@ -16,7 +21,7 @@ const StartButton = ({ }) => {
                 <Text style={HomeScreenStyles.startButtonText}>START</Text>
             </TouchableOpacity>
         </View>
-  );
+    );
 };
 
 export default StartButton;

@@ -2,10 +2,9 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ActivityScreen from './activity';
 import ProfileScreen from './profile/profile';
-import HomeScreen from './home';
+import HomeScreen from './home/home';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { green, white, black } from '../styles/globalStyles';
-import TestScreen from './test';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,8 +21,6 @@ const RootScreen = () => {
         <Icon name="ios-pulse" color={color} size={size} />),}}/>
       <Tab.Screen name="Profile" component={ProfileScreen} options={{tabBarIcon: ({ color, size }) => (
         <Icon name="person-outline" color={color} size={size} />),}}/>
-      {/* <Tab.Screen name="Test" component={TestScreen} options={{tabBarIcon: ({ color, size }) => (
-        <Icon name="checkbox" color={color} size={size} />),}}/> */}
     </Tab.Navigator>
   );
 };

@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import GlobalStyles, { white } from '../styles/globalStyles';
-import ActivityScreenStyles from '../styles/screens/activityStyles';
+import GlobalStyles, { white } from '../../styles/globalStyles';
+import ActivityScreenStyles from '../../styles/screens/activityStyles';
 
 const ActivityHeader = () => {
     

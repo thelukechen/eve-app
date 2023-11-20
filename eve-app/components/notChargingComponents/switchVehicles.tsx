@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import HomeScreenStyles from '../styles/screens/homeStyles';
+import HomeScreenStyles from '../../styles/screens/homeStyles';
 
 const SwitchVehiclesButton = () => {
     
