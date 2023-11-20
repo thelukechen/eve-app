@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const GreenScreen = () => {
+const Charging = () => {
   return (
     <View style={{ ...styles.container, backgroundColor: 'green' }}>
       <Text style={styles.headerText}>Charging</Text>
@@ -24,4 +24,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default GreenScreen;
+export default Charging;

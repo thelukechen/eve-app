@@ -31,7 +31,7 @@ export const GlobalStyles = StyleSheet.create({
     },
     row: {
         width: '100%',
-        flex: 1,
+        // flex: 1,
         flexDirection: 'row',
         alignItems: 'flex-start',
         paddingBottom: 5,
@@ -49,6 +49,7 @@ export const GlobalStyles = StyleSheet.create({
         paddingTop: 5,
         paddingLeft: 1,
         paddingRight: 1,
+        backgroundColor: black,
     },
     subView: {
         width: '100%',

@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
 import { green, white } from '../globalStyles';
-import CurrVehicle from '../../components/currVehicle';
 
 const ActivityScreenStyles = StyleSheet.create({
     refresh: { // used in activityHeader.tsx
@@ -18,8 +17,9 @@ const ActivityScreenStyles = StyleSheet.create({
     switchText: { // used in currVehicle.tsx
         color: white,
         fontSize: 11,
+        textDecorationLine: 'underline',
     },
-    switchView: { // used in currVehicle.tsx   
+    switchView: { // used in currVehicle.tsx
         flexDirection: 'column', 
         paddingLeft: 50,
         paddingRight: 20,
