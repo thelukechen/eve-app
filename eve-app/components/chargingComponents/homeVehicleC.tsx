@@ -16,8 +16,8 @@ const HomeVehicleC = () => {
             <Image source={require('../../assets/images/model-y.png')} 
             style={HomeScreenStyles.carImage} />
             <View style={[GlobalStyles.row, {alignItems: 'center'}]}>
-              <Icon name="battery-dead" size={24} color= {black}/>
-              <Text style={[HomeScreenStyles.carDetailsText, {color: black}]}>  Not Connected</Text>
+              <Icon name="battery-full" size={24} color= {black}/>
+              <Text style={[HomeScreenStyles.carDetailsText, {color: black}]}>  Connected</Text>
             </View>
         </View>
     </View>

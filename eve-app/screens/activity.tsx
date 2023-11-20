@@ -1,11 +1,19 @@
-import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import { LineChart, BarChart } from 'react-native-chart-kit';
-import GlobalStyles, { white } from '../styles/globalStyles';
+import React, { useEffect } from 'react';
+import { StyleSheet, ScrollView, StatusBar } from 'react-native';
+import GlobalStyles from '../styles/globalStyles';
 import ActivityHeader from '../components/activityComponents/activityHeader';
 import CurrVehicle from '../components/activityComponents/currVehicle';
+import { useIsFocused } from '@react-navigation/native';
 
 const ActivityScreen = () => {
+  const isFocused = useIsFocused();
+
+  useEffect(() => {
+    if (isFocused) {
+      StatusBar.setBarStyle('light-content');
+    }
+  }, [isFocused]);
+  
   // Sample data for the line chart
   const lineChartData = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
@@ -37,6 +45,7 @@ const ActivityScreen = () => {
     <ScrollView contentContainerStyle={GlobalStyles.container} 
     style={GlobalStyles.scrollView} indicatorStyle='white'
     showsVerticalScrollIndicator={true}>
+      <StatusBar barStyle='light-content' />
       <ActivityHeader />
       <CurrVehicle />
     </ScrollView>

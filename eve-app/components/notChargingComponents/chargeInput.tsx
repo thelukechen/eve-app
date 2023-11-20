@@ -18,11 +18,11 @@ const ChargeInput = () => {
         mode="dropdown"
       >
         <Picker.Item label="Select Charge Length" value="Charge Length" />
-        <Picker.Item label="1 hour" value="1 hour" />
-        <Picker.Item label="2 hours" value="2 hours" />
-        <Picker.Item label="4 hours" value="4 hours" />
-        <Picker.Item label="8 hours" value="8 hours" />
-        <Picker.Item label="12 hours" value="12 hours" />
+        <Picker.Item label="1 hour" value="1" />
+        <Picker.Item label="2 hours" value="2" />
+        <Picker.Item label="4 hours" value="4" />
+        <Picker.Item label="8 hours" value="8" />
+        <Picker.Item label="12 hours" value="12" />
         <Picker.Item label="Max" value="Max" />
       </Picker>
     </View>

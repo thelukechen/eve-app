@@ -1,5 +1,5 @@
-import React from 'react';
-import { ScrollView, View, Text, TouchableOpacity } from 'react-native';
+import React, { useEffect } from 'react';
+import { ScrollView, View, Text, TouchableOpacity, StatusBar } from 'react-native';
 import GlobalStyles, { black, green, white } from '../../styles/globalStyles';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from './home';
@@ -8,6 +8,7 @@ import HomeHeaderC from '../../components/chargingComponents/homeHeaderC';
 import SwitchVehiclesButtonC from '../../components/chargingComponents/switchVehiclesC';
 import HomeVehicleC from '../../components/chargingComponents/homeVehicleC';
 import ChargeInputC from '../../components/chargingComponents/chargeInputC';
+import { useIsFocused } from '@react-navigation/native';
 
 type HomeScreenProps = {
   navigation: StackNavigationProp<RootStackParamList, 'Charging'>;
@@ -15,8 +16,16 @@ type HomeScreenProps = {
 
 const ChargingScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
 
+  const isFocused = useIsFocused();
+
+  useEffect(() => {
+    if (isFocused) {
+      StatusBar.setBarStyle('dark-content');
+    }
+  }, [isFocused]);
+
   const handleStartPress = () => {
-    console.log('Start button pressed!');
+    console.log('Stop button pressed!');
     navigation.navigate('NotCharging');
   };
 
