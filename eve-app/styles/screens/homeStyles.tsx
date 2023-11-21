@@ -55,7 +55,20 @@ const HomeScreenStyles = StyleSheet.create({
     pickerView: { // used in chargeInput.tsx
         height: 80,
         marginBottom: 80,
-    }
+    },
+    chargeGreen: { // used in chargingSpecs.tsx
+        backgroundColor: green,
+    },
+    chargeSpecsText: { // used in chargingSpecs.tsx
+        color: black,
+        fontSize: 18,
+    },
+    chargeSpecsView: { // used in chargingSpecs.tsx
+        flexDirection: 'column',
+        justifyContent: 'center', 
+        alignItems: 'center',
+        // borderWidth: 1,
+    },
 });
 
 export default HomeScreenStyles;

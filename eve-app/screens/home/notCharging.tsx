@@ -38,7 +38,7 @@ const NotChargingScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
       <SwitchVehiclesButton />
       <HomeVehicle />
       <ChargeInput />
-      <View style={[GlobalStyles.row, {justifyContent: 'center'}]}>
+      <View style={[GlobalStyles.row, {justifyContent: 'center', paddingTop: 45}]}>
         <TouchableOpacity onPress={handleStartPress} style={HomeScreenStyles.startButton}>
           <Text style={HomeScreenStyles.startButtonText}>START</Text>
         </TouchableOpacity>

@@ -7,8 +7,8 @@ import HomeScreenStyles from '../../styles/screens/homeStyles';
 import HomeHeaderC from '../../components/chargingComponents/homeHeaderC';
 import SwitchVehiclesButtonC from '../../components/chargingComponents/switchVehiclesC';
 import HomeVehicleC from '../../components/chargingComponents/homeVehicleC';
-import ChargeInputC from '../../components/chargingComponents/chargeInputC';
 import { useIsFocused } from '@react-navigation/native';
+import ChargingSpecs from '../../components/chargingComponents/chargingSpecs';
 
 type HomeScreenProps = {
   navigation: StackNavigationProp<RootStackParamList, 'Charging'>;
@@ -37,7 +37,7 @@ const ChargingScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
       <HomeHeaderC />
       <SwitchVehiclesButtonC />
       <HomeVehicleC />
-      <ChargeInputC />
+      <ChargingSpecs />
       <View style={[GlobalStyles.row, {justifyContent: 'center'}]}>
         <TouchableOpacity onPress={handleStartPress} style={[HomeScreenStyles.startButton, {backgroundColor: black}]}>
           <Text style={[HomeScreenStyles.startButtonText, {color: white}]}>STOP</Text>
