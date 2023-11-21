@@ -15,7 +15,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.thelukechen.eve-app"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,7 +26,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },"fonts": [
+    },
+    "fonts": [
       {
         "SFProDisplay-Bold": "./assets/fonts/SF-Pro-Display-Bold.otf"
       },

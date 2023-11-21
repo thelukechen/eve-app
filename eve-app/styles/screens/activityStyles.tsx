@@ -25,7 +25,7 @@ const ActivityScreenStyles = StyleSheet.create({
         paddingRight: 20,
     },
     currVehicle: { // used in currVehicle.tsx
-        borderWidth: 2,
+        // borderWidth: 2,
         borderColor: green,
         borderRadius: 30,
         width: '100%',
