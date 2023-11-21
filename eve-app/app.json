@@ -18,25 +18,13 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.thelukechen.eve-app"
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
-    },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "fonts": [
-      {
-        "SFProDisplay-Bold": "./assets/fonts/SF-Pro-Display-Bold.otf"
-      },
-      {
-        "SFProDisplay-Regular": "./assets/fonts/SF-Pro-Display-Regular.otf"
-      },
-      {
-        "SFProDisplay-Thin": "./assets/fonts/SF-Pro-Display-Thin.otf"
+    "extra": {
+      "eas": {
+        "projectId": "4f99798b-67bf-4166-b146-002b00947435"
       }
-    ]
+    }
   }
 }
