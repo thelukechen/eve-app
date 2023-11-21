@@ -27,13 +27,12 @@ const Cars = () => {
   
   return (
     <View style={GlobalStyles.column}>
-        <View style={[GlobalStyles.subView, ProfileScreenStyles.addButton]}>
-          <Text style={GlobalStyles.subText}>Your Vehicles</Text>
-          <TouchableOpacity onPress={() => console.log('Add Vehicle Button Pressed')}>
-            <Text style={[GlobalStyles.subText, ProfileScreenStyles.addButtonText]}>+ Add</Text>
-          </TouchableOpacity>
-        </View>
-      
+      <View style={[GlobalStyles.subView, ProfileScreenStyles.addButton]}>
+        <Text style={GlobalStyles.subText}>Your Vehicles</Text>
+        <TouchableOpacity onPress={() => console.log('Add Vehicle Button Pressed')}>
+          <Text style={[GlobalStyles.subText, ProfileScreenStyles.addButtonText]}>+ Add</Text>
+        </TouchableOpacity>
+      </View>
       <ScrollView horizontal={true}
       showsHorizontalScrollIndicator={false}>
         {electricVehicles.map((vehicle, index) => (

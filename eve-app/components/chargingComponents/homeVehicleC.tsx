@@ -8,7 +8,7 @@ const HomeVehicleC = () => {
     
   return (
     <View style={[GlobalStyles.column, {backgroundColor: green}]}>
-      <View style={[GlobalStyles.subView, {alignItems: 'center'}]}>
+      <View style={[GlobalStyles.subView, {justifyContent: 'center'}]}>
         <Text style={[GlobalStyles.subText, {color: black}]}>Luke's Tesla Model Y</Text>
       </View>
       <View style={GlobalStyles.center}>

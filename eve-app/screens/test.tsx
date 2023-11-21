@@ -1,34 +1,36 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import ProfilePic from '../components/profileComponents/profilePic';
-import { black } from '../styles/globalStyles';
-import Cars from '../components/profileComponents/cars';
-import SettingsButtons from '../components/profileComponents/settings';
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
+import GlobalStyles from '../styles/globalStyles';
 
-const TestScreen = () => {
+const SummaryComponent = () => {
+  const [showDetails, setShowDetails] = useState(false);
+
+  const toggleDetails = () => {
+    setShowDetails(!showDetails);
+  };
+
   return (
-    <View style={styles.container}>
-        <ProfilePic />
+    <ScrollView contentContainerStyle={GlobalStyles.container} 
+    style={GlobalStyles.scrollView} indicatorStyle='white' 
+    showsVerticalScrollIndicator={true}>
+    <View>
+      <Text>Summary Information</Text>
+
+      {showDetails ? (
+        <View>
+          {/* Detailed Information */}
+          <Text>Detailed Information 1</Text>
+          <Text>Detailed Information 2</Text>
+          <Text>Detailed Information 3</Text>
+        </View>
+      ) : null}
+
+      <TouchableOpacity onPress={toggleDetails}>
+        <Text>{showDetails ? 'Hide Details' : 'Show Details'}</Text>
+      </TouchableOpacity>
     </View>
+    </ScrollView>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    flexDirection: 'row',    
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    alignContent: 'flex-start',
-    backgroundColor: black,
-    borderColor: 'green',
-    borderWidth: 10,
-    paddingTop: 100,
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-});
-
-export default TestScreen;
+export default SummaryComponent;

@@ -53,7 +53,8 @@ export const GlobalStyles = StyleSheet.create({
     },
     subView: {
         width: '100%',
-        paddingTop: 25,
+        paddingTop: 20,
+        flexDirection: 'row',
     },
     test: {
         borderWidth: 1,

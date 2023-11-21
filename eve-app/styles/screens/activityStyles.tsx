@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { green, white } from '../globalStyles';
+import { black, green, white } from '../globalStyles';
 
 const ActivityScreenStyles = StyleSheet.create({
     refresh: { // used in activityHeader.tsx
@@ -27,9 +27,28 @@ const ActivityScreenStyles = StyleSheet.create({
     currVehicle: { // used in currVehicle.tsx
         borderWidth: 2,
         borderColor: green,
-        borderRadius: 36,
+        borderRadius: 30,
         width: '100%',
-    }
+    },
+    chargeBlack: { // used in activityChargingSpecs.tsx
+        backgroundColor: black,
+    },
+    chargeSpecsText: { // used in activityChargingSpecs.tsx
+        color: white,
+        fontSize: 18,
+    },
+    textWhite: { // used in activityChargingSpecs.tsx
+        color: white,
+    },
+    carDetailsText: { // used in connection.tsx
+        textAlign: 'center',
+        color: green,
+        fontSize: 20,
+    },
+    breakdownInfoButton: { // used in powerMixBreakdown.tsx 
+        paddingLeft: 135,
+    },
+
 });
 
 export default ActivityScreenStyles;

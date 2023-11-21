@@ -8,7 +8,7 @@ const CurrVehicle = () => {
   return (
     <View style={GlobalStyles.column}>
         <View style={GlobalStyles.subView}>
-            <Text style={GlobalStyles.subText}>Current Vehicle</Text>
+            <Text style={GlobalStyles.subText}>Current Charge</Text>
         </View>
         <View style={[GlobalStyles.row, GlobalStyles.center, ActivityScreenStyles.currVehicle]}>
             <Image source={require('../../assets/images/model-y.png')} 

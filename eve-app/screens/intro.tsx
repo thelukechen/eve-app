@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
+import { green } from '../styles/globalStyles';
 
 const IntroScreen = ({ navigation }: {navigation: any}) => {
   useEffect(() => {
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: green,
   },
   logo: {
     width: 150,

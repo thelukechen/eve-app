@@ -20,7 +20,7 @@ const ChargingSpecs = () => {
         </View>
     </View>
     <HomeEnergyGraph />
-    <Text>Energy Added (kWh)</Text>
+    <Text>Energy Delivered (kWh)</Text>
     </View>
   );
 };
