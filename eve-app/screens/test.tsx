@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, ScrollView, Button } from 'react-native';
 import GlobalStyles from '../styles/globalStyles';
 import { fetchData, ApiResponse } from '../api/getLatestPowerBreakdownAPI';
+import TimerComponent from '../timer/TimerComponent';
 
 
 const PowerConsumptionTable: React.FC<{ data: ApiResponse['powerConsumptionBreakdown'] }> = ({ data }) => {
@@ -41,21 +42,8 @@ const refreshData = () => {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scrollView}>
-        <Text>Power Consumption Data</Text>
-        {data ? <PowerConsumptionTable data={data.powerConsumptionBreakdown} /> : <Text>Loading...</Text>}
-        <View style={styles.buttonContainer}>
-          <Button title="Refresh Data" onPress={refreshData} />
-        </View>
-      </ScrollView>
-      {data && (
-        <View style={styles.updatedAtContainer}>
-          <Text>Last Updated: {data.updatedAt}</Text>
-          <Text>Fossil Free Percentage: {data.fossilFreePercentage}</Text>
-          <Text>Renewable Percentage: {data.renewablePercentage}</Text>
-          <Text>Power Consumption Total: {data.powerConsumptionTotal}</Text>
-          <Text>Zone: {data.zone}</Text>
-        </View>
-      )}
+        <TimerComponent />
+          </ScrollView>
     </View>
   );
 };

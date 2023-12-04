@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { ScrollView, View, Text, TouchableOpacity, StatusBar } from 'react-native';
 import GlobalStyles from '../../styles/globalStyles';
 import HomeHeader from '../../components/notChargingComponents/homeHeader';
@@ -10,12 +10,15 @@ import { RootStackParamList } from './home';
 import HomeScreenStyles from '../../styles/screens/homeStyles';
 import { useIsFocused } from '@react-navigation/native';
 import { sendStartSignal } from '../../firebase/sendStartSignal';
+import { TimerContext } from '../../timer/TimerContext';
 
 type HomeScreenProps = {
   navigation: StackNavigationProp<RootStackParamList, 'NotCharging'>;
 };
 
 const NotChargingScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
+
+  const { startTimer, resetTimer } = useContext(TimerContext);
 
   const isFocused = useIsFocused();
 
@@ -28,6 +31,8 @@ const NotChargingScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
   const handleStartPress = () => {
     console.log('Start button pressed!');
     sendStartSignal();
+    resetTimer();
+    startTimer();
     navigation.navigate('Charging');
   };
 
