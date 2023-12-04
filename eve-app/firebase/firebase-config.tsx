@@ -19,7 +19,9 @@ const firebaseConfig = {
   databaseURL: "https://eve-app-c101e-default-rtdb.firebaseio.com/",
 };
 
+export default firebaseConfig;
+
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
-export const database = getDatabase(app);
+// export const app = initializeApp(firebaseConfig);
+// export const database = getDatabase(app);
 // const analytics = getAnalytics(app);
