@@ -9,6 +9,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from './home';
 import HomeScreenStyles from '../../styles/screens/homeStyles';
 import { useIsFocused } from '@react-navigation/native';
+import { sendStartSignal } from '../../firebase/sendStartSignal';
 
 type HomeScreenProps = {
   navigation: StackNavigationProp<RootStackParamList, 'NotCharging'>;
@@ -26,6 +27,7 @@ const NotChargingScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
 
   const handleStartPress = () => {
     console.log('Start button pressed!');
+    sendStartSignal();
     navigation.navigate('Charging');
   };
 

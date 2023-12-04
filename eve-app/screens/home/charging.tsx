@@ -9,6 +9,7 @@ import SwitchVehiclesButtonC from '../../components/chargingComponents/switchVeh
 import HomeVehicleC from '../../components/chargingComponents/homeVehicleC';
 import { useIsFocused } from '@react-navigation/native';
 import ChargingSpecs from '../../components/chargingComponents/chargingSpecs';
+import { sendStopSignal } from '../../firebase/sendStopSignal';
 
 type HomeScreenProps = {
   navigation: StackNavigationProp<RootStackParamList, 'Charging'>;
@@ -26,6 +27,7 @@ const ChargingScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
 
   const handleStartPress = () => {
     console.log('Stop button pressed!');
+    sendStopSignal();
     navigation.navigate('NotCharging');
   };
 
