@@ -16,7 +16,7 @@ const ChargingSpecs = () => {
         </View>
         <View style={[GlobalStyles.column, HomeScreenStyles.chargeGreen]}>
           <Icon name="timer-outline" size={26} color= {black}/>
-          <Text style={HomeScreenStyles.chargeSpecsText}>00:00:06</Text>
+          <Text style={HomeScreenStyles.chargeSpecsText}>00:12:06</Text>
         </View>
     </View>
     <HomeEnergyGraph />

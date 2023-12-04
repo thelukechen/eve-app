@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
-import { green } from '../styles/globalStyles';
+import { black } from '../styles/globalStyles';
 
 const IntroScreen = ({ navigation }: {navigation: any}) => {
   useEffect(() => {
@@ -14,8 +14,12 @@ const IntroScreen = ({ navigation }: {navigation: any}) => {
 
   return (
     <View style={styles.container}>
-      <Image source={require('../assets/images/cybertruck.png')} 
+      <Image source={require('../assets/images/eve-logo.png')} 
       style={styles.logo} />
+      {/* <FadingBorderImage
+        source={{ uri: '../assets/images/eve-logo.png' }}
+        style={{ width: 200, height: 200, borderRadius: 20 }}
+      /> */}
     </View>
   );
 };
@@ -25,11 +29,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: green,
+    backgroundColor: black,
   },
   logo: {
-    width: 150,
-    height: 150,
+    width: 200,
+    height: 200,
   },
 });
 

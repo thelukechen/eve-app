@@ -19,7 +19,7 @@ const ActivityChargingSpecs = () => {
         </View>
         <View style={[GlobalStyles.column, ActivityScreenStyles.chargeBlack]}>
           <Icon name="timer-outline" size={26} color= {white}/>
-          <Text style={ActivityScreenStyles.chargeSpecsText}>00:00:06</Text>
+          <Text style={ActivityScreenStyles.chargeSpecsText}>00:12:06</Text>
         </View>
     </View>
     <ActivityEnergyGraph />

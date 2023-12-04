@@ -5,6 +5,7 @@ import ProfileScreen from './profile/profile';
 import HomeScreen from './home/home';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { green, white, black } from '../styles/globalStyles';
+import SummaryComponent from './test';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,6 +22,8 @@ const RootScreen = () => {
         <Icon name="ios-pulse" color={color} size={size} />),}}/>
       <Tab.Screen name="Profile" component={ProfileScreen} options={{tabBarIcon: ({ color, size }) => (
         <Icon name="person-outline" color={color} size={size} />),}}/>
+      {/* <Tab.Screen name="Test" component={SummaryComponent} options={{tabBarIcon: ({ color, size }) => (
+        <Icon name="settings-outline" color={color} size={size} />),}}/> */}
     </Tab.Navigator>
   );
 };

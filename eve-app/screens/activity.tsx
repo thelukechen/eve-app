@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, ScrollView, StatusBar } from 'react-native';
+import { ScrollView, StatusBar } from 'react-native';
 import GlobalStyles from '../styles/globalStyles';
 import ActivityHeader from '../components/activityComponents/activityHeader';
 import CurrVehicle from '../components/activityComponents/currVehicle';

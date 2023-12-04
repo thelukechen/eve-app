@@ -48,7 +48,19 @@ const ActivityScreenStyles = StyleSheet.create({
     breakdownInfoButton: { // used in powerMixBreakdown.tsx 
         paddingLeft: 135,
     },
-
+    table: {
+        marginTop: 20,
+      },
+      tableRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingVertical: 8,
+        borderBottomWidth: 1,
+        borderBottomColor: '#ddd',
+      },
+      tableCell: {
+        flex: 1,
+      },
 });
 
 export default ActivityScreenStyles;
