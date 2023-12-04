@@ -49,17 +49,19 @@ const ActivityScreenStyles = StyleSheet.create({
         paddingLeft: 135,
     },
     table: {
-        marginTop: 20,
+        marginTop: 0,
       },
       tableRow: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'space-evenly',
         paddingVertical: 8,
         borderBottomWidth: 1,
-        borderBottomColor: '#ddd',
+        borderBottomColor: white,
+        borderColor: white,
       },
       tableCell: {
         flex: 1,
+        color: white,
       },
 });
 

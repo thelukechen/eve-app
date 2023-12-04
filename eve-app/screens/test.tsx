@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, ScrollView, Button } from 'react-native';
-import GlobalStyles from '../styles/globalStyles';
+import GlobalStyles, { white } from '../styles/globalStyles';
 import { fetchData, ApiResponse } from '../api/getLatestPowerBreakdownAPI';
 import TimerComponent from '../timer/TimerComponent';
 
@@ -42,7 +42,10 @@ const refreshData = () => {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scrollView}>
-        <TimerComponent />
+      {data ? 
+            <PowerConsumptionTable data={data.powerConsumptionBreakdown} /> : 
+            <Text style={{ color: white }}>Loading...</Text>
+          }
           </ScrollView>
     </View>
   );
@@ -76,6 +79,7 @@ const styles = StyleSheet.create({
   },
   tableCell: {
     flex: 1,
+    color: white,
   },
   buttonContainer: {
     marginVertical: 20,
