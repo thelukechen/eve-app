@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ScrollView, View, Text, TouchableOpacity, StatusBar } from 'react-native';
 import GlobalStyles, { black, green, white } from '../../styles/globalStyles';
 import { StackNavigationProp } from '@react-navigation/stack';
@@ -9,6 +9,7 @@ import SwitchVehiclesButtonC from '../../components/chargingComponents/switchVeh
 import HomeVehicleC from '../../components/chargingComponents/homeVehicleC';
 import { useIsFocused } from '@react-navigation/native';
 import ChargingSpecs from '../../components/chargingComponents/chargingSpecs';
+import TimerParent from '../../components/chargingComponents/timerParent';
 
 type HomeScreenProps = {
   navigation: StackNavigationProp<RootStackParamList, 'Charging'>;
@@ -32,17 +33,15 @@ const ChargingScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={[GlobalStyles.container, {backgroundColor: green}]} 
     style={[GlobalStyles.scrollView, {backgroundColor: green}]} indicatorStyle='white'
-    scrollEnabled={false}
+    scrollEnabled={true}
     showsVerticalScrollIndicator={true}>
       <HomeHeaderC />
       <SwitchVehiclesButtonC />
       <HomeVehicleC />
       <ChargingSpecs />
-      <View style={[GlobalStyles.row, {justifyContent: 'center'}]}>
-        <TouchableOpacity onPress={handleStartPress} style={[HomeScreenStyles.startButton, {backgroundColor: black}]}>
-          <Text style={[HomeScreenStyles.startButtonText, {color: white}]}>STOP</Text>
-        </TouchableOpacity>
-      </View>
+      {/* <View style={[GlobalStyles.row, {justifyContent: 'center'}]}>
+        <TimerParent />
+      </View> */}
     </ScrollView>
   );
 };
