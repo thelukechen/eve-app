@@ -18,7 +18,7 @@ const ChargingSpecs = () => {
           {data ? (
             <Text style={HomeScreenStyles.chargeSpecsText}>{JSON.stringify(data)} Watts</Text>
             ) : (
-            <Text>Loading...</Text>
+            <Text  style={HomeScreenStyles.chargeSpecsText}>Loading...</Text>
           )}
           </View>
           <View style={[GlobalStyles.column, HomeScreenStyles.chargeGreen]}>

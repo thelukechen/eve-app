@@ -21,7 +21,7 @@ const ActivityChargingSpecs = () => {
           {data ? (
             <Text style={ActivityScreenStyles.chargeSpecsText}>{JSON.stringify(data)} Watts</Text>
             ) : (
-            <Text>Loading...</Text>
+            <Text style={ActivityScreenStyles.chargeSpecsText}>Loading...</Text>
           )}
         </View>
         <View style={[GlobalStyles.column, ActivityScreenStyles.chargeBlack]}>
